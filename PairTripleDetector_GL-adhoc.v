@@ -10,20 +10,20 @@ module Top();
   // that we use "logic" not "wire" in test benches. A "logic" is a more
   // abstract kind of signal than a "wire" in Verilog.
 
-  logic dut_in0;
-  logic dut_in1;
-  logic dut_in2;
-  logic dut_out;
+  logic in0;
+  logic in1;
+  logic in2;
+  logic out;
 
   // Instantiate the design-under-test (DUT) and hook up the ports to the
   // logic signals we just declared.
 
   PairTripleDetector_GL dut
   (
-    .in0 (dut_in0),
-    .in1 (dut_in1),
-    .in2 (dut_in2),
-    .out (dut_out)
+    .in0 (in0),
+    .in1 (in1),
+    .in2 (in2),
+    .out (out)
   );
 
   // An initial block is a special piece of code which starts running at
@@ -44,29 +44,29 @@ module Top();
     // Then we display all of the input and output values. We do this
     // four times with four different sets of input values.
 
-    dut_in0 = 0;
-    dut_in1 = 0;
-    dut_in2 = 0;
+    in0 = 0;
+    in1 = 0;
+    in2 = 0;
     #10;
-    $display( "%b %b %b > %b", dut_in0, dut_in1, dut_in2, dut_out );
+    $display( "%b %b %b > %b", in0, in1, in2, out );
 
-    dut_in0 = 0;
-    dut_in1 = 1;
-    dut_in2 = 1;
+    in0 = 0;
+    in1 = 1;
+    in2 = 1;
     #10;
-    $display( "%b %b %b > %b", dut_in0, dut_in1, dut_in2, dut_out );
+    $display( "%b %b %b > %b", in0, in1, in2, out );
 
-    dut_in0 = 0;
-    dut_in1 = 1;
-    dut_in2 = 0;
+    in0 = 0;
+    in1 = 1;
+    in2 = 0;
     #10;
-    $display( "%b %b %b > %b", dut_in0, dut_in1, dut_in2, dut_out );
+    $display( "%b %b %b > %b", in0, in1, in2, out );
 
-    dut_in0 = 1;
-    dut_in1 = 1;
-    dut_in2 = 1;
+    in0 = 1;
+    in1 = 1;
+    in2 = 1;
     #10;
-    $display( "%b %b %b > %b", dut_in0, dut_in1, dut_in2, dut_out );
+    $display( "%b %b %b > %b", in0, in1, in2, out );
 
   end
 
