@@ -47,8 +47,8 @@ jobs:
       - name: Run sim tests
         timeout-minutes: 10
         run: |
-          verilator -Wall --lint-only PairTripleDetectorGL.v
-          iverilog -Wall -g2012 -o PairTripleDetectorGL-test PairTripleDetectorGL-test.v
-          ./PairTripleDetectorGL-test | tee PairTripleDetectorGL-test.log
+          verilator -Wall --lint-only PairTripleDetector_GL.v
+          iverilog -Wall -g2012 -o PairTripleDetector_GL-test PairTripleDetector_GL-test.v
+          ./PairTripleDetector_GL-test | tee PairTripleDetector_GL-test.log
           ! grep -q "FAILED" PairTripleDetectorGL-test.log
 
