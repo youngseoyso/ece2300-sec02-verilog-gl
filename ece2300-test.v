@@ -7,8 +7,8 @@
 // ECE 2300 unit testing library for lab assignments.
 //
 
-`ifndef ECE2300_STDLIB_V
-`define ECE2300_STDLIB_V
+`ifndef ECE2300_TEST_V
+`define ECE2300_TEST_V
 
 //------------------------------------------------------------------------
 // Colors
@@ -149,5 +149,5 @@ endmodule
   end                                                                   \
   if (1)
 
-`endif /* ECE2300_STDLIB */
+`endif /* ECE2300_TEST */
 
