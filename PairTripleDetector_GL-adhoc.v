@@ -37,7 +37,7 @@ module Top();
     // file which contains waveforms so we can visualize what our
     // hardware design is doing.
 
-    $dumpfile("PairTripleDetector_adhoc_test.vcd");
+    $dumpfile("PairTripleDetector_GL-adhoc.vcd");
     $dumpvars;
 
     // Set input values for all input ports. Then wait 10 units of time.
